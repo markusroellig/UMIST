@@ -1,0 +1,470 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     13860,        460]
+NotebookOptionsPosition[     10715,        360]
+NotebookOutlinePosition[     12461,        407]
+CellTagsIndexPosition[     12376,        402]
+WindowTitle->Eformat - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:UMIST/guide/UMIST"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["UMIST PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"PaddedForm\"\>":>Documentation`HelpLookup[
+       "paclet:ref/PaddedForm"], "\<\"printF2\"\>":>Documentation`HelpLookup[
+       "paclet:UMIST/ref/printF2"], "\<\"NumberForm\"\>":>
+       Documentation`HelpLookup["paclet:ref/NumberForm"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST Isotopization Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/guide/UMIST Isotopization Package"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST/ref/Eformat\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["UMIST/ref/Eformat"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/UMIST/ref/Eformat.\
+html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, Visible -> 
+            False]]; SelectionMove[
+         DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", "UMIST/ref/Eformat", 
+             ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["Eformat", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"Eformat", "[", 
+       RowBox[{
+        StyleBox["num", "TI"], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          StyleBox["total", "TI"], ",", 
+          StyleBox["ndigits", "TI"]}], "}"}]}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]Eformat returns Fortran E Format representation of the \
+number ",
+     Cell[BoxData[
+      StyleBox["num", "TI"]], "InlineFormula"],
+     ". Numbers whose exponents are greater than 99 are treated as errors. \
+Note that zero is detected by comparison with MachineEpsilon and printed as \
+0.0000.. without the exponent."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->81684048],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->312233154],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<UMIST`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->509092004],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Eformat", "[", 
+  RowBox[{"1.234567", ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->148305266],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" \"\>", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"1.235\"\>",
+     1.234567,
+     AutoDelete->True],
+    PaddedForm[#, {10, 3}, NumberPadding -> {"", "0"}]& ], 
+   "\[InvisibleSpace]", "\<\"E\"\>", "\[InvisibleSpace]", "\<\"+\"\>", 
+   "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"00\"\>",
+     0,
+     Editable->False],
+    PaddedForm[#, 1, NumberPadding -> {"0", ""}]& ]}],
+  SequenceForm[" ", 
+   PaddedForm[1.234567, {10, 3}, NumberPadding -> {"", "0"}], "E", "+", 
+   PaddedForm[0, 1, NumberPadding -> {"0", ""}]],
+  Editable->False]], "Output",
+ ImageSize->{74, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->369126861]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Eformat", "[", 
+  RowBox[{"1.234567", ",", 
+   RowBox[{"{", 
+    RowBox[{"10", ",", "4"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->483476401],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Eformat", "::", "toomany"}], "MessageName"], ":", 
+  " ", "\<\"Too many digits to right of decimal Point \\nrequested.\"\>"}]], \
+"Message", "MSG",
+ CellLabel->"During evaluation of In[3]:=",
+ CellID->4333019]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Eformat", "[", 
+  RowBox[{
+   RowBox[{"N", "[", "\[Pi]", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"18", ",", "9"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->1013351378],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" \"\>", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"3.141592654\"\>",
+     3.141592653589793,
+     AutoDelete->True],
+    PaddedForm[#, {18, 9}, NumberPadding -> {"", "0"}]& ], 
+   "\[InvisibleSpace]", "\<\"E\"\>", "\[InvisibleSpace]", "\<\"+\"\>", 
+   "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"00\"\>",
+     0,
+     Editable->False],
+    PaddedForm[#, 1, NumberPadding -> {"0", ""}]& ]}],
+  SequenceForm[" ", 
+   PaddedForm[3.141592653589793, {18, 9}, NumberPadding -> {"", "0"}], "E", 
+   "+", 
+   PaddedForm[0, 1, NumberPadding -> {"0", ""}]],
+  Editable->False]], "Output",
+ ImageSize->{116, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->369648857]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Eformat", "[", 
+  RowBox[{
+   RowBox[{"N", "[", 
+    RowBox[{"3.18", " ", 
+     SuperscriptBox["10", "23"]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"18", ",", "9"}], "}"}]}], "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->12096530],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" \"\>", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"3.180000000\"\>",
+     3.18,
+     AutoDelete->True],
+    PaddedForm[#, {18, 9}, NumberPadding -> {"", "0"}]& ], 
+   "\[InvisibleSpace]", "\<\"E\"\>", "\[InvisibleSpace]", "\<\"+\"\>", 
+   "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox["\<\"23\"\>",
+     23,
+     Editable->False],
+    PaddedForm[#, 1, NumberPadding -> {"", ""}]& ]}],
+  SequenceForm[" ", 
+   PaddedForm[3.18, {18, 9}, NumberPadding -> {"", "0"}], "E", "+", 
+   PaddedForm[23, 1, NumberPadding -> {"", ""}]],
+  Editable->False]], "Output",
+ ImageSize->{116, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->678113598]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["PaddedForm",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/PaddedForm"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["printF2",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/printF2"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["NumberForm",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/NumberForm"],
+   FontFamily->"Verdana"]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["UMIST Isotopization Package",
+ BaseStyle->"Link",
+ ButtonData->"paclet:UMIST/guide/UMIST Isotopization Package"]], "MoreAbout",
+ CellID->304234740]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"Eformat - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 9, 11, 13, 19, 46.3393195}", "context" -> "UMIST`", 
+    "keywords" -> {}, "index" -> True, "label" -> "UMIST Paclet Symbol", 
+    "language" -> "en", "paclet" -> "UMIST", "status" -> "None", "summary" -> 
+    "Eformat[num, {total, ndigits}] Eformat returns Fortran E Format \
+representation of the number num. Numbers whose exponents are greater than 99 \
+are treated as errors. Note that zero is detected by comparison with \
+MachineEpsilon and printed as 0.0000.. without the exponent.", 
+    "synonyms" -> {}, "title" -> "Eformat", "type" -> "Symbol", "uri" -> 
+    "UMIST/ref/Eformat"}, "LinkTrails" -> "", "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4473, 125, 460, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->81684048]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 12234, 395}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[600, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[679, 24, 176, 5, 70, "LinkTrail"],
+Cell[858, 31, 2704, 62, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3565, 95, 50, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3618, 98, 830, 23, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[4473, 125, 460, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->81684048],
+Cell[CellGroupData[{
+Cell[4958, 142, 148, 5, 70, "ExampleSection",
+ CellID->312233154],
+Cell[5109, 149, 114, 3, 70, "Input",
+ CellID->509092004],
+Cell[CellGroupData[{
+Cell[5248, 156, 183, 6, 70, "Input",
+ CellID->148305266],
+Cell[5434, 164, 762, 23, 36, "Output",
+ CellID->369126861]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6233, 192, 183, 6, 70, "Input",
+ CellID->483476401],
+Cell[6419, 200, 257, 7, 70, "Message",
+ CellID->4333019]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6713, 212, 210, 7, 70, "Input",
+ CellID->1013351378],
+Cell[6926, 221, 791, 24, 36, "Output",
+ CellID->369648857]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7754, 250, 261, 9, 70, "Input",
+ CellID->12096530],
+Cell[8018, 261, 761, 23, 36, "Output",
+ CellID->678113598]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8840, 291, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[9260, 305, 782, 28, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10079, 338, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[10501, 352, 172, 3, 70, "MoreAbout",
+ CellID->304234740]
+}, Open  ]],
+Cell[10688, 358, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,466 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     14529,        456]
+NotebookOptionsPosition[     11895,        373]
+NotebookOutlinePosition[     13517,        419]
+CellTagsIndexPosition[     13432,        414]
+WindowTitle->isNotCOisotop - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:UMIST/guide/UMIST"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["UMIST PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"isCOisotop\"\>":>Documentation`HelpLookup[
+       "paclet:UMIST/ref/isCOisotop"], "\<\"isCHisotop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isCHisotop"], "\<\"isNotCHisotop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isNotCHisotop"], "\<\"isCHnisotop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isCHnisotop"], "\<\"isNotCHnisotop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isNotCHnisotop"], "\<\"isCSisotop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isCSisotop"], "\<\"isNotCSisotop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isNotCSisotop"], "\<\"isCNisotop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isCNisotop"], "\<\"isNotCNisotop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isNotCNisotop"], "\<\"isNotCPisotop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isNotCPisotop"], "\<\"is13Cisotop\"\>":>
+       Documentation`HelpLookup["paclet:UMIST/ref/is13Cisotop"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST Isotopization Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/guide/UMIST Isotopization Package"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST/ref/isNotCOisotop\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["UMIST/ref/isNotCOisotop"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/UMIST/ref/\
+isNotCOisotop.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "UMIST/ref/isNotCOisotop", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["isNotCOisotop", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"isNotCOisotop", "[", 
+       StyleBox["molecule", "TI"], "]"}]], "InlineFormula"],
+     " \[LineSeparator]isNotCOisotop returns True if ",
+     Cell[BoxData[
+      StyleBox["molecule", "TI"]], "InlineFormula"],
+     " does not contain a 13C-O bound, i.e. neighbouring 13C and O atoms."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->562573757],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->306135812],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<UMIST`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->12628883],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"list", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<CO\>\"", ",", "\"\<HCO+\>\"", ",", "\"\<H13COOH\>\"", ",", 
+     "\"\<C10\>\"", ",", "\"\<13CC3\>\"", ",", "\"\<Si13CH4+\>\"", ",", 
+     "\"\<CH213CHCNH+\>\"", ",", "\"\<CH3COCH3+\>\"", ",", 
+     "\"\<CH313COCH3+\>\"", ",", "\"\<C13CH5OH2+\>\""}], "}"}]}], 
+  ";"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->186537636],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableForm", "[", 
+  RowBox[{"Transpose", "[", 
+   RowBox[{"{", 
+    RowBox[{"list", ",", 
+     RowBox[{"isCOisotop", "@", "list"}], ",", 
+     RowBox[{"isNotCOisotop", "@", "list"}]}], "}"}], "]"}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->598782866],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"CO\"\>", "False", "True"},
+    {"\<\"HCO+\"\>", "False", "True"},
+    {"\<\"H13COOH\"\>", "True", "False"},
+    {"\<\"C10\"\>", "False", "True"},
+    {"\<\"13CC3\"\>", "False", "True"},
+    {"\<\"Si13CH4+\"\>", "False", "True"},
+    {"\<\"CH213CHCNH+\"\>", "False", "True"},
+    {"\<\"CH3COCH3+\"\>", "False", "True"},
+    {"\<\"CH313COCH3+\"\>", "True", "False"},
+    {"\<\"C13CH5OH2+\"\>", "False", "True"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ ImageSize->{201, 147},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]//TableForm=",
+ CellID->242382785]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isCOisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isCOisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isCHisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isCHisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isNotCHisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isNotCHisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isCHnisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isCHnisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isNotCHnisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isNotCHnisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isCSisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isCSisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isNotCSisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isNotCSisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isCNisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isCNisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isNotCNisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isNotCNisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isNotCPisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isNotCPisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["is13Cisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/is13Cisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["UMIST Isotopization Package",
+ BaseStyle->"Link",
+ ButtonData->"paclet:UMIST/guide/UMIST Isotopization Package"]], "MoreAbout",
+ CellID->10534555]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"isNotCOisotop - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 9, 11, 13, 20, 19.8710153}", "context" -> "UMIST`", 
+    "keywords" -> {}, "index" -> True, "label" -> "UMIST Paclet Symbol", 
+    "language" -> "en", "paclet" -> "UMIST", "status" -> "None", "summary" -> 
+    "isNotCOisotop[molecule] isNotCOisotop returns True if molecule does not \
+contain a 13C-O bound, i.e. neighbouring 13C and O atoms.", "synonyms" -> {}, 
+    "title" -> "isNotCOisotop", "type" -> "Symbol", "uri" -> 
+    "UMIST/ref/isNotCOisotop"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5050, 134, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->562573757]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 13289, 407}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[606, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[685, 24, 176, 5, 70, "LinkTrail"],
+Cell[864, 31, 3551, 79, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[4418, 112, 56, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[4477, 115, 548, 15, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[5050, 134, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->562573757],
+Cell[CellGroupData[{
+Cell[5536, 151, 148, 5, 70, "ExampleSection",
+ CellID->306135812],
+Cell[5687, 158, 113, 3, 70, "Input",
+ CellID->12628883],
+Cell[5803, 163, 408, 11, 70, "Input",
+ CellID->186537636],
+Cell[CellGroupData[{
+Cell[6236, 178, 282, 8, 70, "Input",
+ CellID->598782866],
+Cell[6521, 188, 1065, 29, 182, "Output",
+ CellID->242382785]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7647, 224, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[8067, 238, 3156, 108, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11260, 351, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[11682, 365, 171, 3, 70, "MoreAbout",
+ CellID->10534555]
+}, Open  ]],
+Cell[11868, 371, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

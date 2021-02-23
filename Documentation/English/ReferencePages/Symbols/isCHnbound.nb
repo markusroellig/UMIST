@@ -1,0 +1,522 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     16017,        512]
+NotebookOptionsPosition[     13123,        418]
+NotebookOutlinePosition[     14705,        463]
+CellTagsIndexPosition[     14620,        458]
+WindowTitle->isCHnbound - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:UMIST/guide/UMIST"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["UMIST PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"isCObound\"\>":>Documentation`HelpLookup[
+       "paclet:UMIST/ref/isCObound"], "\<\"isCSbound\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isCSbound"], "\<\"isCNbound\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isCNbound"], "\<\"isleft18Obound\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isleft18Obound"], "\<\"isright18Obound\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isright18Obound"], "\<\"isleft13CNbound\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isleft13CNbound"], "\<\"isCOCHnbound\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isCOCHnbound"], "\<\"isCHbound\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/isCHbound"], "\<\"isC18Obound\"\>":>
+       Documentation`HelpLookup["paclet:UMIST/ref/isC18Obound"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST Isotopization Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/guide/UMIST Isotopization Package"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST/ref/isCHnbound\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["UMIST/ref/isCHnbound"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/UMIST/ref/\
+isCHnbound.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "UMIST/ref/isCHnbound", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["isCHnbound", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"isCHnbound", "[", 
+       StyleBox["molecule", "TI"], "]"}]], "InlineFormula"],
+     " \[LineSeparator]isCHnbound returns True if CHn groups are present in ",
+     Cell[BoxData[
+      StyleBox["molecule", "TI"]], "InlineFormula"],
+     ", including isotopes."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->132743320],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->326220817],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<UMIST`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->12628883],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"list", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<CO\>\"", ",", "\"\<HCO+\>\"", ",", "\"\<HCOOH\>\"", ",", 
+     "\"\<C10\>\"", ",", "\"\<13CC3\>\"", ",", "\"\<H2CCC\>\"", ",", 
+     "\"\<CH3\>\"", ",", "\"\<Si13CH4+\>\"", ",", "\"\<CH213CHCNH+\>\"", ",", 
+     "\"\<CH3COCH3+\>\"", ",", "\"\<13CH3COCH3+\>\"", ",", 
+     "\"\<C13CH5OH2+\>\""}], "}"}]}], ";"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->186537636],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"countCHngroups", "@", "list"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->332713461],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1", 
+   ",", "1", ",", "2", ",", "2", ",", "0"}], "}"}]], "Output",
+ ImageSize->{223, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->293988748]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"isCHnbound", "@", "list"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->64109583],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "False", ",", "False", ",", "False", ",", "False", ",", "False", ",", 
+   "True", ",", "True", ",", "True", ",", "True", ",", "True", ",", "True", 
+   ",", "False"}], "}"}]], "Output",
+ ImageSize->{517, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->374778225]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"TableForm", "[", 
+    RowBox[{
+     RowBox[{"Transpose", "[", 
+      RowBox[{"{", 
+       RowBox[{"#", ",", 
+        RowBox[{"countCHngroups", "@", "#"}], ",", 
+        RowBox[{"isCHnbound", "@", "#"}]}], "}"}], "]"}], ",", 
+     RowBox[{"TableHeadings", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"None", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<molecule\>\"", ",", 
+          "\"\<nr. of \!\(\*SubscriptBox[\(CH\), \(n\)]\)\>\"", ",", " ", 
+          "\"\<\!\(\*SubscriptBox[\(CH\), \(n\)]\) bound\>\""}], "}"}]}], 
+       "}"}]}]}], "]"}], "&"}], "@", "list"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->64454133],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      TagBox["\<\"molecule\"\>",
+       HoldForm], 
+      TagBox["\<\"nr. of \\!\\(\\*SubscriptBox[\\(CH\\), \\(n\\)]\\)\"\>",
+       HoldForm], 
+      TagBox["\<\"\\!\\(\\*SubscriptBox[\\(CH\\), \\(n\\)]\\) bound\"\>",
+       HoldForm]},
+     {"\<\"CO\"\>", "0", "False"},
+     {"\<\"HCO+\"\>", "0", "False"},
+     {"\<\"HCOOH\"\>", "0", "False"},
+     {"\<\"C10\"\>", "0", "False"},
+     {"\<\"13CC3\"\>", "0", "False"},
+     {"\<\"H2CCC\"\>", "1", "True"},
+     {"\<\"CH3\"\>", "1", "True"},
+     {"\<\"Si13CH4+\"\>", "1", "True"},
+     {"\<\"CH213CHCNH+\"\>", "1", "True"},
+     {"\<\"CH3COCH3+\"\>", "2", "True"},
+     {"\<\"13CH3COCH3+\"\>", "2", "True"},
+     {"\<\"C13CH5OH2+\"\>", "0", "False"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {{False}}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   {None, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, 
+    TableHeadings -> {
+     None, {"molecule", "nr. of \!\(\*SubscriptBox[\(CH\), \(n\)]\)", 
+       "\!\(\*SubscriptBox[\(CH\), \(n\)]\) bound"}}]]]], "Output",
+ ImageSize->{262, 193},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]//TableForm=",
+ CellID->125212309]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isCObound",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isCObound"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isCSbound",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isCSbound"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isCNbound",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isCNbound"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isleft18Obound",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isleft18Obound"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isright18Obound",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isright18Obound"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isleft13CNbound",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isleft13CNbound"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isCOCHnbound",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isCOCHnbound"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isCHbound",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isCHbound"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isC18Obound",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isC18Obound"],
+   FontFamily->"Verdana"]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["UMIST Isotopization Package",
+ BaseStyle->"Link",
+ ButtonData->"paclet:UMIST/guide/UMIST Isotopization Package"]], "MoreAbout",
+ CellID->559989185]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"isCHnbound - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 9, 11, 13, 19, 59.5993428}", "context" -> "UMIST`", 
+    "keywords" -> {}, "index" -> True, "label" -> "UMIST Paclet Symbol", 
+    "language" -> "en", "paclet" -> "UMIST", "status" -> "None", "summary" -> 
+    "isCHnbound[molecule] isCHnbound returns True if CHn groups are present \
+in molecule, including isotopes.", "synonyms" -> {}, "title" -> "isCHnbound", 
+    "type" -> "Symbol", "uri" -> "UMIST/ref/isCHnbound"}, "LinkTrails" -> "", 
+  "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4806, 130, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->132743320]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 14477, 451}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[603, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[682, 24, 176, 5, 70, "LinkTrail"],
+Cell[861, 31, 3339, 75, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[4203, 108, 53, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[4259, 111, 522, 15, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[4806, 130, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->132743320],
+Cell[CellGroupData[{
+Cell[5292, 147, 148, 5, 70, "ExampleSection",
+ CellID->326220817],
+Cell[5443, 154, 113, 3, 70, "Input",
+ CellID->12628883],
+Cell[5559, 159, 451, 11, 70, "Input",
+ CellID->186537636],
+Cell[CellGroupData[{
+Cell[6035, 174, 108, 3, 70, "Input",
+ CellID->332713461],
+Cell[6146, 179, 311, 9, 36, "Output",
+ CellID->293988748]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6494, 193, 103, 3, 70, "Input",
+ CellID->64109583],
+Cell[6600, 198, 357, 10, 36, "Output",
+ CellID->374778225]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6994, 213, 686, 20, 70, "Input",
+ CellID->64454133],
+Cell[7683, 235, 1720, 47, 228, "Output",
+ CellID->125212309]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9464, 289, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[9884, 303, 2566, 88, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12487, 396, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[12909, 410, 172, 3, 70, "MoreAbout",
+ CellID->559989185]
+}, Open  ]],
+Cell[13096, 416, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

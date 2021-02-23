@@ -1,0 +1,565 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     18191,        555]
+NotebookOptionsPosition[     15452,        468]
+NotebookOutlinePosition[     17086,        514]
+CellTagsIndexPosition[     17001,        509]
+WindowTitle->countCHngroups - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:UMIST/guide/UMIST"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["UMIST PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"countHatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countHatoms"], "\<\"countHeatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countHeatoms"], "\<\"countCatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countCatoms"], "\<\"countNatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countNatoms"], "\<\"countOatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countOatoms"], "\<\"countFatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countFatoms"], "\<\"countNaatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countNaatoms"], "\<\"countMgatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countMgatoms"], "\<\"countSiatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countSiatoms"], "\<\"countPatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countPatoms"], "\<\"countSatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countSatoms"], "\<\"countClatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countClatoms"], "\<\"countFeatoms\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countFeatoms"], "\<\"countElements\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countElements"], "\<\"countHCNOS\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countHCNOS"], "\<\"countCOgroups\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/countCOgroups"], "\<\"isCHnbound\"\>":>
+       Documentation`HelpLookup["paclet:UMIST/ref/isCHnbound"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST Isotopization Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/guide/UMIST Isotopization Package"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST/ref/countCHngroups\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["UMIST/ref/countCHngroups"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/UMIST/ref/\
+countCHngroups.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "UMIST/ref/countCHngroups", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["countCHngroups", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"countCHngroups", "[", 
+       StyleBox["molecule", "TI"], "]"}]], "InlineFormula"],
+     " \[LineSeparator]countCHngroups counts how many CHn groups are present \
+in ",
+     Cell[BoxData[
+      StyleBox["molecule", "TI"]], "InlineFormula"],
+     ", including isotopes (n can be any integer > 0)."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->215575232],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->768019789],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<UMIST`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->12628883],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"countCHngroups", "@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<CO\>\"", ",", "\"\<HCO+\>\"", ",", "\"\<HCOOH\>\"", ",", 
+    "\"\<C10\>\"", ",", "\"\<13CC3\>\"", ",", "\"\<H2CCC\>\"", ",", 
+    "\"\<CH3\>\"", ",", "\"\<Si13CH4+\>\"", ",", "\"\<CH213CHCNH+\>\"", ",", 
+    "\"\<CH3COCH3+\>\"", ",", "\"\<13CH3COCH3+\>\"", ",", 
+    "\"\<C13CH5OH2+\>\""}], "}"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->332713461],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1", 
+   ",", "1", ",", "2", ",", "2", ",", "0"}], "}"}]], "Output",
+ ImageSize->{223, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->293988748]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ChemicalData", "[", 
+  RowBox[{"\"\<CH3COCH3\>\"", ",", "\"\<CHColorStructureDiagram\>\""}], 
+  "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->366469760],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJztm1tLG0EUx6XtQ79GP0LpJ2hfSynVvvioxcuDWLRCuiVRSRTTRlFf9MFC
+VQgSoSqmNKihKhqwNuKla1FBMFKrQiIoxtL4kP6zuRgvWWd3Z2c3YX4kYSI7
+e878Z+acmcn6oPx1ceWdoqKiN/fxUVxmeVxfXyaU3MOXJ0JDRfldFJ7j/Qrv
+RDnO4XAKh8OJLkutxVLb9e3gUjkfreiNOHDhszhgGVrNYyu6woUiBG5LcyH1
+0k0oFlZ0hY8oQrhQJBRw1iuMVKsRQhHyfRhTgUQEykKtiqK2G6gkcnT0e29P
+bW0yoeilWrj6vrtbww3Uc3xy0ux0xs7PVdUmEYHmiIJKGrpVK1PT0+M+n6qq
+TKfe57GxgaEhtbUpgOH0zm4/ODxUXvVWEahlvWg0arXZwpGI8qo0mZuf7+np
+UVhJqwgLwSAGM+Gs93g8fr9foYe60NHRsbm5SXIlwpp7eBifGi2enZ1hyre2
+t//a2JC/MhwOOxyOWCym0SIVdnd3nU6n/DXo/a9TUwj+SysrtOwi7ba6XJ2d
+nfv7+zKXHR8f07KoHXlnlpeXBat1eHRUbYqUQxTFxsbGkZGR9B/aqiuT1Hnb
+qqvbqBvUyM3uYeRjYiKIoaCr+UAgIM2vhBsp6966ykzZLOR0D7OSMHxRIWHc
+ZNJkYx73Ep7UeY32Iifmcc88XXYjZnIvKwiYqQfTmMk9KUhmEkvmz4YvElIO
+5HDPPGCl19fXZ4hcSGdY9M7MzLA3rY7FxUVBEMbHx5kt1NEv6B0skJD92Vgk
+xOfzibKnc5AIQkEuiKarJ+SG3G63/M6COug+OEYyWpIdjcm4vb2thyeKhi58
+uHUDSBe0XdE4SXrocrkoBq6trS2bzaY0GGLngl0eLR/k2QmFmlpaVFScnJzE
+VhFzVmPggjKYRAjaKpocjkSsdrseG+HraDnpjUaj2FNDLnXdCoWhM6pryWsj
+Xu/03Jzq6oSsiuLHwUGNN8G2HVMAGUpRaIW2ybMLqK3FOoZTs9Op/aROHs/o
+KC0TWPOg4R6PJ93w3prk4rDKOttbU9N7cSUyPt2DkaWVFYqHdWzw+/3S+XZC
+pZQ4s9aqTDl9cMryYEQhTH9nT2iTPYb0hXrT2P3ODqEw4XS7/XXoNo2pUAxH
+VJy+UOweacuKUSwGGN2msX3ERYrhmbynq6n8nXrModi0An66rICbxrkEluiB
+QCAu7eny6JSSPVh+Y6sSl1bjgiAY7Y554UIRwoUihAtFCBeKEC4UIVwoQrhQ
+hECoDw5HXBLqbUOD0e6Yl8j3hYnKChROQ6EvL0uMdse8nAR/bEpC/dvb+/ns
+qdHumBcuFCFcKEK4UIRwoQjhQhHChSLkdG0tI5RY8sJod0xNLP0YRkznf1Th
+FD6hT+uPHgYTr9I/IaOdMS0JldL6ZJc5l/nbX7rev5PrKyfDUdPDK0IFm1g+
+BZQ3XFGGj6ic8BhFDs96HA6Hw+GYgP9mGShQ
+    "], {{0, 79}, {99, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSize->Automatic,
+  ImageSizeRaw->{99, 79},
+  PlotRange->{{0, 99}, {0, 79}}]], "Output",
+ ImageSize->{103, 79},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->244301241]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countHatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countHatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countHeatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countHeatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countCatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countCatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countNatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countNatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countOatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countOatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countFatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countFatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countNaatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countNaatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countMgatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countMgatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countSiatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countSiatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countPatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countPatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countSatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countSatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countClatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countClatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countFeatoms",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countFeatoms"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countElements",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countElements"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countHCNOS",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countHCNOS"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["countCOgroups",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/countCOgroups"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isCHnbound",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isCHnbound"],
+   FontFamily->"Verdana"]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["UMIST Isotopization Package",
+ BaseStyle->"Link",
+ ButtonData->"paclet:UMIST/guide/UMIST Isotopization Package"]], "MoreAbout",
+ CellID->480806108]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"countCHngroups - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 9, 11, 13, 19, 27.4944864}", "context" -> "UMIST`", 
+    "keywords" -> {}, "index" -> True, "label" -> "UMIST Paclet Symbol", 
+    "language" -> "en", "paclet" -> "UMIST", "status" -> "None", "summary" -> 
+    "countCHngroups[molecule] countCHngroups counts how many CHn groups are \
+present in molecule, including isotopes (n can be any integer > 0).", 
+    "synonyms" -> {}, "title" -> "countCHngroups", "type" -> "Symbol", "uri" -> 
+    "UMIST/ref/countCHngroups"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5659, 148, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->215575232]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 16858, 502}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[607, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[686, 24, 176, 5, 70, "LinkTrail"],
+Cell[865, 31, 4147, 92, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[5015, 125, 57, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[5075, 128, 559, 16, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[5659, 148, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->215575232],
+Cell[CellGroupData[{
+Cell[6145, 165, 148, 5, 70, "ExampleSection",
+ CellID->768019789],
+Cell[6296, 172, 113, 3, 70, "Input",
+ CellID->12628883],
+Cell[CellGroupData[{
+Cell[6434, 179, 436, 10, 70, "Input",
+ CellID->332713461],
+Cell[6873, 191, 311, 9, 36, "Output",
+ CellID->293988748]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7221, 205, 179, 5, 28, "Input",
+ CellID->366469760],
+Cell[7403, 212, 1985, 40, 100, "Output",
+ CellID->244301241]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9449, 259, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[9869, 273, 4910, 168, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14816, 446, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[15238, 460, 172, 3, 70, "MoreAbout",
+ CellID->480806108]
+}, Open  ]],
+Cell[15425, 466, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,370 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     11010,        360]
+NotebookOptionsPosition[      8225,        271]
+NotebookOutlinePosition[      9851,        317]
+CellTagsIndexPosition[      9767,        312]
+WindowTitle->isright18Obound - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:UMIST/guide/UMIST"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["UMIST PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"is13Cisotop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/is13Cisotop"], "\<\"is18Oisotop\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/is18Oisotop"], "\<\"isleft18Obound\"\>":>
+       Documentation`HelpLookup["paclet:UMIST/ref/isleft18Obound"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST Isotopization Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/guide/UMIST Isotopization Package"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST/ref/isright18Obound\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["UMIST/ref/isright18Obound"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/UMIST/ref/\
+isright18Obound.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "UMIST/ref/isright18Obound", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["isright18Obound", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"isright18Obound", "[", 
+       StyleBox["molecule", "TI"], "]"}]], "InlineFormula"],
+     " \[LineSeparator]isright18Obound returns True if it detects an O-18O \
+bound in ",
+     Cell[BoxData[
+      StyleBox["molecule", "TI"]], "InlineFormula"],
+     " (in contrast to an 18O-O bound)."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->735971783],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->61659418],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<UMIST`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->866033187],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"list", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Flatten", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"carbonizePlusSingle", "@", "#"}], ",", 
+       RowBox[{"oxygenizePlusSingle", "/@", 
+        RowBox[{"carbonizePlusSingle", "@", "#"}]}], ",", "#"}], "}"}], "]"}],
+     "&"}], "@", "\"\<HCOOH\>\""}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->389980941],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"H13COOH\"\>", ",", "\<\"HC18OOH\"\>", ",", "\<\"HCO18OH\"\>", 
+   ",", "\<\"HCOOH\"\>"}], "}"}]], "Output",
+ ImageSize->{233, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->235846166]
+}, Open  ]],
+
+Cell["\<\
+isleft18Obound has Attribute Listable and can be applied to a list of species.\
+\>", "ExampleText",
+ CellID->60095440],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"isright18Obound", "@", "list"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->382778206],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"False", ",", "False", ",", "True", ",", "False"}], "}"}]], "Output",
+ ImageSize->{184, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->233381177]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["is13Cisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/is13Cisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["is18Oisotop",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/is18Oisotop"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["isleft18Obound",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/isleft18Obound"],
+   FontFamily->"Verdana"]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->449368172]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["UMIST Isotopization Package",
+ BaseStyle->"Link",
+ ButtonData->"paclet:UMIST/guide/UMIST Isotopization Package"]], "MoreAbout",
+ CellID->502624896]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"isright18Obound - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 9, 11, 13, 20, 23.6639451}", "context" -> "UMIST`", 
+    "keywords" -> {}, "index" -> True, "label" -> "UMIST Paclet Symbol", 
+    "language" -> "en", "paclet" -> "UMIST", "status" -> "None", "summary" -> 
+    "isright18Obound[molecule] isright18Obound returns True if it detects an \
+O-18O bound in molecule (in contrast to an 18O-O bound).", "synonyms" -> {}, 
+    "title" -> "isright18Obound", "type" -> "Symbol", "uri" -> 
+    "UMIST/ref/isright18Obound"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4287, 120, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->735971783]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 9624, 305}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[608, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[687, 24, 176, 5, 70, "LinkTrail"],
+Cell[866, 31, 2783, 64, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3652, 97, 58, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3713, 100, 549, 16, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[4287, 120, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->735971783],
+Cell[CellGroupData[{
+Cell[4773, 137, 147, 5, 70, "ExampleSection",
+ CellID->61659418],
+Cell[4923, 144, 114, 3, 70, "Input",
+ CellID->866033187],
+Cell[CellGroupData[{
+Cell[5062, 151, 393, 12, 70, "Input",
+ CellID->389980941],
+Cell[5458, 165, 282, 8, 36, "Output",
+ CellID->235846166]
+}, Open  ]],
+Cell[5755, 176, 128, 3, 70, "ExampleText",
+ CellID->60095440],
+Cell[CellGroupData[{
+Cell[5908, 183, 109, 3, 70, "Input",
+ CellID->382778206],
+Cell[6020, 188, 239, 7, 36, "Output",
+ CellID->233381177]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6320, 202, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[6740, 216, 812, 28, 70, "SeeAlso",
+ CellID->449368172]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7589, 249, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[8011, 263, 172, 3, 70, "MoreAbout",
+ CellID->502624896]
+}, Open  ]],
+Cell[8198, 269, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

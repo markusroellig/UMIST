@@ -1,0 +1,571 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     16440,        561]
+NotebookOptionsPosition[     12691,        446]
+NotebookOutlinePosition[     14737,        498]
+CellTagsIndexPosition[     14652,        493]
+WindowTitle->\:0394BX - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:guide/Mathematica"],
+  FontSlant->"Italic"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["UMIST PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"findPartnerA\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/ref/findPartnerA"], "\<\"\[CapitalDelta]AX\"\>":>
+       Documentation`HelpLookup["paclet:UMIST/ref/\[CapitalDelta]AX"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST/ref/\[CapitalDelta]\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["UMIST/ref/\[CapitalDelta]"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/UMIST/ref/\
+\[CapitalDelta].html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "UMIST/ref/\[CapitalDelta]", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["\[CapitalDelta]BX", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"\[CapitalDelta]BX", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         ButtonBox["A",
+          BaseStyle->"Link",
+          ButtonData->"paclet:UMIST/ref/A"], ",", 
+         ButtonBox["B",
+          BaseStyle->"Link",
+          ButtonData->"paclet:UMIST/ref/B"], ",", 
+         ButtonBox["C",
+          BaseStyle->"Link",
+          ButtonData->"paclet:ref/C"], ",", 
+         ButtonBox["D",
+          BaseStyle->"Link",
+          ButtonData->"paclet:ref/D"]}], "}"}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]\[CapitalDelta]BX ",
+     "determines the transport vector for species B in the reaction A + B -> \
+D + E by looking for the least changes in atomic composition. It gives the \
+number of particular atoms changing between A \[LongLeftRightArrow] B, in the \
+form: {\[CapitalDelta]H,\[CapitalDelta]He,\[CapitalDelta]C,\[CapitalDelta]N,\
+\[CapitalDelta]O,\[CapitalDelta]Si,\[CapitalDelta]P,\[CapitalDelta]S,\
+\[CapitalDelta]Cl}. Negative numbers denote particle reception, positive \
+numbers particle donation."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->60677537],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->648434084],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<UMIST`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->12628883],
+
+Cell[TextData[{
+ "For example take the reaction: ",
+ Cell[BoxData[
+  SuperscriptBox["C", "-"]], "InlineFormula"],
+ "+",
+ Cell[BoxData[
+  RowBox[{
+   SuperscriptBox["\[InvisiblePrefixScriptBase]", "13"], "C"}]], 
+  "InlineFormula"],
+ "H \[LongRightArrow] ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"\[InvisiblePrefixScriptBase]", 
+    SuperscriptBox["C", "13"]}], "C"}]], "InlineFormula"],
+ "H + ",
+ Cell[BoxData[
+  SuperscriptBox["e", "-"]], "InlineFormula"],
+ ". The product that is produced from ",
+ Cell[BoxData[
+  RowBox[{
+   SuperscriptBox["\[InvisiblePrefixScriptBase]", "13"], "C"}]], 
+  "InlineFormula"],
+ "H  is ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"\[InvisiblePrefixScriptBase]", 
+    SuperscriptBox["C", "13"]}], "C"}]], "InlineFormula"],
+ "H.",
+ Cell[BoxData[
+  RowBox[{" ", 
+   RowBox[{
+    SuperscriptBox["\[InvisiblePrefixScriptBase]", "13"], "CH"}]}]], 
+  "InlineFormula"],
+ " receives a carbon atom turning it into  ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"\[InvisiblePrefixScriptBase]", 
+    SuperscriptBox["C", "13"]}], "C"}]], "InlineFormula"],
+ "H."
+}], "ExampleText",
+ CellID->78060979],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]BX", "@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<C-\>\"", ",", "\"\<13CH\>\"", ",", "\"\<C13CH\>\"", ",", 
+    "\"\<e-\>\""}], "}"}]}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->332713461],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "0", ",", 
+   RowBox[{"-", "1"}], ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0"}], "}"}]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ ImageSize->{177, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[2]=",
+ CellID->37307540]
+}, Open  ]],
+
+Cell[TextData[{
+ "Reversing the order of the starting species changes the output accordingly. \
+",
+ " ",
+ Cell[BoxData[
+  SuperscriptBox["C", "-"]], "InlineFormula"],
+ " is converted into ",
+ Cell[BoxData[
+  SuperscriptBox["e", "-"]], "InlineFormula"],
+ " by giving away a carbon atom."
+}], "ExampleText",
+ CellID->91553122],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]BX", "@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<13CH\>\"", ",", "\"\<C-\>\"", ",", "\"\<C13CH\>\"", ",", 
+    "\"\<e-\>\""}], "}"}]}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->673502450],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+   ",", "0"}], "}"}]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ ImageSize->{169, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->69282878]
+}, Open  ]],
+
+Cell[TextData[{
+ "For example take the reaction: ",
+ Cell[BoxData[
+  SuperscriptBox["HCO", "+"]], "InlineFormula"],
+ "+",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["CH", "3"], 
+   SubscriptBox["COCH", "3"]}]], "InlineFormula"],
+ " \[LongRightArrow] ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["CH", "3"], 
+   SubsuperscriptBox["COCH", "4", "+"]}]], "InlineFormula"],
+ "  + CO. Here a proton is transfered from ",
+ Cell[BoxData[
+  SuperscriptBox["HCO", "+"]], "InlineFormula"],
+ " to ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["CH", "3"], 
+   SubscriptBox["COCH", "3"]}]], "InlineFormula"],
+ " giving ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["CH", "3"], 
+   SubsuperscriptBox["COCH", "4", "+"]}]], "InlineFormula"],
+ "."
+}], "ExampleText",
+ CellID->177885468],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]BX", "@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<HCO+\>\"", ",", "\"\<CH3COCH3\>\"", ",", "\"\<CH3COCH4+\>\"", ",", 
+    "\"\<CO\>\""}], "}"}]}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->300136502],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "1"}], ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0", ",", "0", ",", "0"}], "}"}]], "Output",
+ ImageSize->{177, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[4]=",
+ CellID->516743023]
+}, Open  ]],
+
+Cell[TextData[{
+ "Now take a more complicated reaction: ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["CH", "2"], "CH", " ", "CH", " ", 
+   SubscriptBox["CH", "2"]}]], "InlineFormula"],
+ " + H \[LongRightArrow] ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["C", "2"], 
+   SubscriptBox["H", "4"]}]], "InlineFormula"],
+ " + ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["C", "2"], 
+   SubscriptBox["H", "3"]}]], "InlineFormula"],
+ " . To turn a ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["CH", "2"], "CH", " ", "CH", " ", 
+   SubscriptBox["CH", "2"]}]], "InlineFormula"],
+ " into ",
+ Cell[BoxData[
+  RowBox[{
+   SubscriptBox["C", "2"], 
+   SubscriptBox["H", "4"]}]], "InlineFormula"],
+ " it has to get rid of two hydrogen and two carbon atoms."
+}], "ExampleText",
+ CellID->326718940],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]BX", "@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<CH2CHCHCH2\>\"", ",", "\"\<H\>\"", ",", "\"\<C2H4\>\"", ",", 
+    "\"\<C2H3\>\""}], "}"}]}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->752272585],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "2"}], ",", "0", ",", 
+   RowBox[{"-", "2"}], ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0"}], "}"}]], "Output",
+ ImageSize->{185, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->30163939]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]BX", "@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<CH2CHCHCH2\>\"", ",", "\"\<H\>\"", ",", "\"\<C2H4\>\"", ",", 
+    "\"\<C2H3\>\""}], "}"}]}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->68098673],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "2"}], ",", "0", ",", 
+   RowBox[{"-", "2"}], ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+   "0"}], "}"}]], "Output",
+ ImageSize->{185, 15},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->52842724]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["findPartnerA",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/findPartnerA"],
+   FontFamily->"Verdana"]], "InlineFormula"],
+ "\[NonBreakingSpace]",
+ StyleBox["\[MediumSpace]\[FilledVerySmallSquare]\[MediumSpace]", 
+  "InlineSeparator"],
+ " ",
+ Cell[BoxData[
+  StyleBox[
+   ButtonBox["\[CapitalDelta]AX",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/\[CapitalDelta]AX"],
+   FontFamily->"Verdana"]], "InlineFormula"]
+}], "SeeAlso",
+ CellID->929782353],
+
+Cell[BoxData[
+ StyleBox[
+  ButtonBox[
+   ButtonBox["\[CapitalDelta]AX",
+    BaseStyle->"Link",
+    ButtonData->"paclet:UMIST/ref/\[CapitalDelta]AX"],
+   BaseStyle->"Link",
+   ButtonData->"paclet:UMIST/ref/deltaAX"],
+  FontFamily->"Verdana"]], "Input",
+ CellID->23384580]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"\[CapitalDelta]BX - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 9, 11, 13, 19, 45.2317176}", "context" -> "UMIST`", 
+    "keywords" -> {}, "index" -> True, "label" -> "UMIST Paclet Symbol", 
+    "language" -> "en", "paclet" -> "UMIST", "status" -> "None", "summary" -> 
+    "\\[CapitalDelta]BX[{A, B, C, D}] \\[CapitalDelta]BX determines the \
+transport vector for species B in the reaction A + B -> D + E by looking for \
+the least changes in atomic composition. It gives the number of particular \
+atoms changing between A \\[LongLeftRightArrow] B, in the form: \
+{\\[CapitalDelta]H,\\[CapitalDelta]He,\\[CapitalDelta]C,\\[CapitalDelta]N,\\[\
+CapitalDelta]O,\\[CapitalDelta]Si,\\[CapitalDelta]P,\\[CapitalDelta]S,\\[\
+CapitalDelta]Cl}. Negative numbers denote particle reception, positive \
+numbers particle donation.", "synonyms" -> {}, "title" -> 
+    "\\[CapitalDelta]BX", "type" -> "Symbol", "uri" -> 
+    "UMIST/ref/\\[CapitalDelta]"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[4692, 128, 460, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->60677537]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 14510, 486}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[601, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[680, 24, 209, 6, 70, "LinkTrail"],
+Cell[892, 32, 2418, 55, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3313, 89, 60, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[3376, 92, 1291, 32, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[4692, 128, 460, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->60677537],
+Cell[CellGroupData[{
+Cell[5177, 145, 148, 5, 70, "ExampleSection",
+ CellID->648434084],
+Cell[5328, 152, 113, 3, 70, "Input",
+ CellID->12628883],
+Cell[5444, 157, 1108, 40, 70, "ExampleText",
+ CellID->78060979],
+Cell[CellGroupData[{
+Cell[6577, 201, 225, 7, 70, "Input",
+ CellID->332713461],
+Cell[6805, 210, 346, 11, 36, "Output",
+ CellID->37307540]
+}, Open  ]],
+Cell[7166, 224, 324, 11, 70, "ExampleText",
+ CellID->91553122],
+Cell[CellGroupData[{
+Cell[7515, 239, 225, 7, 70, "Input",
+ CellID->673502450],
+Cell[7743, 248, 330, 11, 36, "Output",
+ CellID->69282878]
+}, Open  ]],
+Cell[8088, 262, 765, 29, 70, "ExampleText",
+ CellID->177885468],
+Cell[CellGroupData[{
+Cell[8878, 295, 235, 7, 70, "Input",
+ CellID->300136502],
+Cell[9116, 304, 297, 9, 36, "Output",
+ CellID->516743023]
+}, Open  ]],
+Cell[9428, 316, 780, 28, 70, "ExampleText",
+ CellID->326718940],
+Cell[CellGroupData[{
+Cell[10233, 348, 231, 7, 70, "Input",
+ CellID->752272585],
+Cell[10467, 357, 315, 10, 36, "Output",
+ CellID->30163939]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10819, 372, 230, 7, 70, "Input",
+ CellID->68098673],
+Cell[11052, 381, 315, 10, 36, "Output",
+ CellID->52842724]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11428, 398, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[11848, 412, 528, 18, 70, "SeeAlso",
+ CellID->929782353],
+Cell[12379, 432, 270, 9, 70, "Input",
+ CellID->23384580]
+}, Open  ]],
+Cell[12664, 444, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

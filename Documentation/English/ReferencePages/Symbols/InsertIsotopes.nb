@@ -1,0 +1,808 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     30395,        798]
+NotebookOptionsPosition[     26538,        671]
+NotebookOutlinePosition[     28230,        718]
+CellTagsIndexPosition[     28145,        713]
+WindowTitle->InsertIsotopes - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[" ", "SymbolColorBar",
+ CellMargins->{{Inherited, Inherited}, {-5, 0}}],
+
+Cell[TextData[{
+ ButtonBox["Mathematica",
+  BaseStyle->{"Link", "LinkTrail"},
+  ButtonData->"paclet:UMIST/guide/UMIST"],
+ StyleBox[" > ", "LinkTrailSeparator"]
+}], "LinkTrail"],
+
+Cell[BoxData[GridBox[{
+   {Cell["UMIST PACLET SYMBOL", "PacletNameCell"], Cell[TextData[{
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"See Also \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"rescaleRates\"\>":>
+       Documentation`HelpLookup["paclet:UMIST/ref/rescaleRates"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"More About \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST Isotopization Package\"\>":>
+       Documentation`HelpLookup[
+       "paclet:UMIST/guide/UMIST Isotopization Package"]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}],
+     "\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+     Cell[BoxData[
+      ActionMenuBox[
+       FrameBox["\<\"URL \[RightGuillemet]\"\>",
+        StripOnInput->False], {"\<\"UMIST/ref/InsertIsotopes\"\>":>
+       None, "\<\"Copy Mathematica url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell["UMIST/ref/InsertIsotopes"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+       Delimiter, "\<\"Copy web url\"\>":>
+       Module[{DocumentationSearch`Private`nb$}, 
+        DocumentationSearch`Private`nb$ = NotebookPut[
+           Notebook[{
+             Cell[
+              BoxData[
+               MakeBoxes[
+                Hyperlink[
+                "http://reference.wolfram.com/mathematica/UMIST/ref/\
+InsertIsotopes.html"], StandardForm]], "Input", TextClipboardType -> 
+              "PlainText"]}, Visible -> False]]; 
+        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+        NotebookClose[DocumentationSearch`Private`nb$]; 
+        Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+         NotebookLocate[{
+           URL[
+            StringJoin[
+            "http://reference.wolfram.com/mathematica/", 
+             "UMIST/ref/InsertIsotopes", ".html"]], None}]}]},
+       Appearance->None,
+       MenuAppearance->Automatic]],
+      LineSpacing->{1.4, 0}]
+    }], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ CellID->1],
+
+Cell["InsertIsotopes", "ObjectName",
+ CellID->1224892054],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"InsertIsotopes", "[", 
+       StyleBox["list", "TI"], "]"}]], "InlineFormula"],
+     " \[LineSeparator]InsertIsotopes takes a ",
+     Cell[BoxData[
+      StyleBox["list", "TI"]], "InlineFormula"],
+     " (CSV import) of chemical reactions and inserts one 13C and one 18O \
+atom into each reaction. The unreasonable permutations are cleaned afterwards."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[
+  FrameBox[
+   StyleBox[
+    RowBox[{"MORE", " ", "INFORMATION"}], "NotesFrameText"],
+   StripOnInput->False],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->364118301],
+
+Cell["\<\
+All possible permutations for all isotopologues are created and unreasonable \
+reactions are filtered out. \
+\>", "Notes",
+ CellID->1067943069],
+
+Cell[TextData[{
+ "New isotopoc variants have the same reaction rates. Apply ",
+ Cell[BoxData[
+  StyleBox["rescaleRates", "TI"]], "InlineFormula"],
+ " in order to rescale the reaction rates of the new reactions."
+}], "Notes",
+ CellID->610160118]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->769563394],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection",
+ CellID->482287399],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<UMIST`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->12628883],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"csv", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "\"\<AD\>\"", ",", "\"\<C-\>\"", ",", "\"\<C\>\"", ",", 
+      "\"\<\>\"", ",", "\"\<C2\>\"", ",", "\"\<e-\>\"", ",", "\"\<\>\"", ",", 
+      "\"\<\>\"", ",", "5.`*^-10", ",", "0.`", ",", "0.`", ",", "10", ",", 
+      "41000"}], "}"}], "}"}]}], ";"}]], "Input",
+ CellLabel->"In[2]:=",
+ CellID->232367397],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InsertIsotopes", "[", "csv", "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->21013471],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "\<\"AD\"\>", ",", "\<\"C-\"\>", ",", "\<\"C\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"C2\"\>", ",", "\<\"e-\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "5.`*^-10", ",", "0.`", ",", "0.`", ",", "10", ",",
+      "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "\<\"AD\"\>", ",", "\<\"C-\"\>", ",", "\<\"13C\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"C13C\"\>", ",", "\<\"e-\"\>", ",", "\<\"\"\>",
+      ",", "\<\"\"\>", ",", "5.`*^-10", ",", "0.`", ",", "0.`", ",", "10", 
+     ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "\<\"AD\"\>", ",", "\<\"13C-\"\>", ",", "\<\"C\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"C13C\"\>", ",", "\<\"e-\"\>", ",", "\<\"\"\>",
+      ",", "\<\"\"\>", ",", "5.`*^-10", ",", "0.`", ",", "0.`", ",", "10", 
+     ",", "41000"}], "}"}]}], "}"}]], "Output",
+ ImageSize->{408, 56},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[3]=",
+ CellID->160837685]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"csv", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+     "4", ",", "\"\<AD\>\"", ",", "\"\<C-\>\"", ",", "\"\<CO2\>\"", ",", 
+      "\"\<\>\"", ",", "\"\<CO\>\"", ",", "\"\<CO\>\"", ",", "\"\<e-\>\"", 
+      ",", "\"\<\>\"", ",", "4.7`*^-11", ",", "0.`", ",", "0.`", ",", "10", 
+      ",", "41000"}], "}"}], "}"}]}], ";"}]], "Input",
+ CellLabel->"In[4]:=",
+ CellID->36006848],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"InsertIsotopes", "[", "csv", "]"}]], "Input",
+ CellLabel->"In[5]:=",
+ CellID->44823107],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"C-\"\>", ",", "\<\"CO2\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"CO\"\>", ",", "\<\"CO\"\>", ",", "\<\"e-\"\>",
+      ",", "\<\"\"\>", ",", "4.7`*^-11", ",", "0.`", ",", "0.`", ",", "10", 
+     ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"C-\"\>", ",", "\<\"CO18O\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"C18O\"\>", ",", "\<\"CO\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "4.7`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"C-\"\>", ",", "\<\"13CO2\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"13CO\"\>", ",", "\<\"CO\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "4.7`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"C-\"\>", ",", "\<\"13CO18O\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"13CO\"\>", ",", "\<\"C18O\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "4.7`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"C-\"\>", ",", "\<\"13CO18O\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"13C18O\"\>", ",", "\<\"CO\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "4.7`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"13C-\"\>", ",", "\<\"CO2\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"13CO\"\>", ",", "\<\"CO\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "4.7`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"13C-\"\>", ",", "\<\"CO18O\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"13CO\"\>", ",", "\<\"C18O\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "4.7`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"13C-\"\>", ",", "\<\"CO18O\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"13C18O\"\>", ",", "\<\"CO\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "4.7`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}]}], "}"}]], "Output",
+ ImageSize->{471, 151},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[5]=",
+ CellID->234587707]
+}, Open  ]],
+
+Cell["To assume uniform branching ratios we rescale the rates", "ExampleText",
+ CellID->329675404],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"rescaleRates", "[", "%", "]"}]], "Input",
+ CellLabel->"In[6]:=",
+ CellID->502764565],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"C-\"\>", ",", "\<\"CO2\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"CO\"\>", ",", "\<\"CO\"\>", ",", "\<\"e-\"\>",
+      ",", "\<\"\"\>", ",", "4.7`*^-11", ",", "0.`", ",", "0.`", ",", "10", 
+     ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"C-\"\>", ",", "\<\"CO18O\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"C18O\"\>", ",", "\<\"CO\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "4.7`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"C-\"\>", ",", "\<\"13CO2\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"13CO\"\>", ",", "\<\"CO\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "4.7`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"C-\"\>", ",", "\<\"13CO18O\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"13CO\"\>", ",", "\<\"C18O\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "2.35`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"C-\"\>", ",", "\<\"13CO18O\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"13C18O\"\>", ",", "\<\"CO\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "2.35`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"13C-\"\>", ",", "\<\"CO2\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"13CO\"\>", ",", "\<\"CO\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "4.7`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"13C-\"\>", ",", "\<\"CO18O\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"13CO\"\>", ",", "\<\"C18O\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "2.35`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "\<\"AD\"\>", ",", "\<\"13C-\"\>", ",", "\<\"CO18O\"\>", 
+     ",", "\<\"\"\>", ",", "\<\"13C18O\"\>", ",", "\<\"CO\"\>", 
+     ",", "\<\"e-\"\>", ",", "\<\"\"\>", ",", "2.35`*^-11", ",", "0.`", ",", 
+     "0.`", ",", "10", ",", "41000"}], "}"}]}], "}"}]], "Output",
+ ImageSize->{478, 151},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[6]=",
+ CellID->82470607]
+}, Open  ]],
+
+Cell["\<\
+Reactions with longer hydrocarbons can have many isotopic variants.\
+\>", "ExampleText",
+ CellID->224886091],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"csv", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+     "2290", ",", "\"\<IN\>\"", ",", "\"\<CH3+\>\"", ",", "\"\<CH3COCH3\>\"", 
+      ",", "\"\<\>\"", ",", "\"\<CH3CO+\>\"", ",", "\"\<CH3CH3\>\"", ",", 
+      "\"\<\>\"", ",", "\"\<\>\"", ",", "1.1`*^-9", ",", 
+      RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], 
+    "}"}]}], ";"}]], "Input",
+ CellLabel->"In[7]:=",
+ CellID->159952008],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"iso", "=", 
+   RowBox[{"InsertIsotopes", "[", "csv", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"iso", "[", 
+  RowBox[{"[", 
+   RowBox[{"All", ",", 
+    RowBox[{"3", ";;", 
+     RowBox[{"-", "1"}]}]}], "]"}], "]"}]}], "Input",
+ CellLabel->"In[8]:=",
+ CellID->33345187],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"CH3COCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3CO+\"\>", ",", "\<\"CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"CH3CO13CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3CO+\"\>", ",", "\<\"CH313CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"CH3CO13CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3CO+\"\>", ",", "\<\"13CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"CH3CO13CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"13CH3CO+\"\>", ",", "\<\"CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"CH3C18OCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3C18O+\"\>", ",", "\<\"CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"CH3C18O13CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3C18O+\"\>", ",", "\<\"CH313CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"CH3C18O13CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3C18O+\"\>", ",", "\<\"13CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"CH3C18O13CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"13CH3C18O+\"\>", ",", "\<\"CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"CH313COCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH313CO+\"\>", ",", "\<\"CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"CH313C18OCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH313C18O+\"\>", ",", "\<\"CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"13CH3COCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3CO+\"\>", ",", "\<\"CH313CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"13CH3COCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3CO+\"\>", ",", "\<\"13CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"13CH3COCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"13CH3CO+\"\>", ",", "\<\"CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"13CH3C18OCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3C18O+\"\>", ",", "\<\"CH313CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"13CH3C18OCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3C18O+\"\>", ",", "\<\"13CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"CH3+\"\>", ",", "\<\"13CH3C18OCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"13CH3C18O+\"\>", ",", "\<\"CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"13CH3+\"\>", ",", "\<\"CH3COCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3CO+\"\>", ",", "\<\"CH313CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"13CH3+\"\>", ",", "\<\"CH3COCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3CO+\"\>", ",", "\<\"13CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"13CH3+\"\>", ",", "\<\"CH3C18OCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3C18O+\"\>", ",", "\<\"CH313CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"13CH3+\"\>", ",", "\<\"CH3C18OCH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"CH3C18O+\"\>", ",", "\<\"13CH3CH3\"\>", ",", "\<\"\"\>", 
+     ",", "\<\"\"\>", ",", "1.1`*^-9", ",", 
+     RowBox[{"-", "0.5`"}], ",", "0.`", ",", "10", ",", "41000"}], "}"}]}], 
+  "}"}]], "Output",
+ ImageSize->{529, 379},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[8]=",
+ CellID->458059057]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"rescaleRates", "[", "iso", "]"}], "[", 
+   RowBox[{"[", 
+    RowBox[{"All", ",", 
+     RowBox[{"3", ";;", 
+      RowBox[{"-", "1"}]}]}], "]"}], "]"}], "//", "TableForm"}]], "Input",
+ CellLabel->"In[9]:=",
+ CellID->101454752],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"CH3+\"\>", "\<\"CH3COCH3\"\>", "\<\"\"\>", "\<\"CH3CO+\"\>", \
+"\<\"CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", "1.1`*^-9", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"CH3CO13CH3\"\>", "\<\"\"\>", "\<\"CH3CO+\"\>", \
+"\<\"CH313CH3\"\>", "\<\"\"\>", "\<\"\"\>", "3.6666666666666664`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"CH3CO13CH3\"\>", "\<\"\"\>", "\<\"CH3CO+\"\>", \
+"\<\"13CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", "3.6666666666666664`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"CH3CO13CH3\"\>", "\<\"\"\>", "\<\"13CH3CO+\"\>", \
+"\<\"CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", "3.6666666666666664`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"CH3C18OCH3\"\>", "\<\"\"\>", "\<\"CH3C18O+\"\>", \
+"\<\"CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", "1.1`*^-9", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"CH3C18O13CH3\"\>", "\<\"\"\>", "\<\"CH3C18O+\"\>", \
+"\<\"CH313CH3\"\>", "\<\"\"\>", "\<\"\"\>", "3.6666666666666664`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"CH3C18O13CH3\"\>", "\<\"\"\>", "\<\"CH3C18O+\"\>", \
+"\<\"13CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", "3.6666666666666664`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"CH3C18O13CH3\"\>", "\<\"\"\>", \
+"\<\"13CH3C18O+\"\>", "\<\"CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", 
+     "3.6666666666666664`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"CH313COCH3\"\>", "\<\"\"\>", "\<\"CH313CO+\"\>", \
+"\<\"CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", "1.1`*^-9", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"CH313C18OCH3\"\>", "\<\"\"\>", \
+"\<\"CH313C18O+\"\>", "\<\"CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", "1.1`*^-9", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"13CH3COCH3\"\>", "\<\"\"\>", "\<\"CH3CO+\"\>", \
+"\<\"CH313CH3\"\>", "\<\"\"\>", "\<\"\"\>", "3.6666666666666664`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"13CH3COCH3\"\>", "\<\"\"\>", "\<\"CH3CO+\"\>", \
+"\<\"13CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", "3.6666666666666664`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"13CH3COCH3\"\>", "\<\"\"\>", "\<\"13CH3CO+\"\>", \
+"\<\"CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", "3.6666666666666664`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"13CH3C18OCH3\"\>", "\<\"\"\>", "\<\"CH3C18O+\"\>", \
+"\<\"CH313CH3\"\>", "\<\"\"\>", "\<\"\"\>", "3.6666666666666664`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"13CH3C18OCH3\"\>", "\<\"\"\>", "\<\"CH3C18O+\"\>", \
+"\<\"13CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", "3.6666666666666664`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"CH3+\"\>", "\<\"13CH3C18OCH3\"\>", "\<\"\"\>", \
+"\<\"13CH3C18O+\"\>", "\<\"CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", 
+     "3.6666666666666664`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"13CH3+\"\>", "\<\"CH3COCH3\"\>", "\<\"\"\>", "\<\"CH3CO+\"\>", \
+"\<\"CH313CH3\"\>", "\<\"\"\>", "\<\"\"\>", "5.5`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"13CH3+\"\>", "\<\"CH3COCH3\"\>", "\<\"\"\>", "\<\"CH3CO+\"\>", \
+"\<\"13CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", "5.5`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"13CH3+\"\>", "\<\"CH3C18OCH3\"\>", "\<\"\"\>", "\<\"CH3C18O+\"\>", \
+"\<\"CH313CH3\"\>", "\<\"\"\>", "\<\"\"\>", "5.5`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"},
+    {"\<\"13CH3+\"\>", "\<\"CH3C18OCH3\"\>", "\<\"\"\>", "\<\"CH3C18O+\"\>", \
+"\<\"13CH3CH3\"\>", "\<\"\"\>", "\<\"\"\>", "5.5`*^-10", 
+     RowBox[{"-", "0.5`"}], "0.`", "10", "41000"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ ImageSize->{715, 357},
+ ImageMargins->{{0, 0}, {0, 0}},
+ ImageRegion->{{0, 1}, {0, 1}},
+ CellLabel->"Out[9]//TableForm=",
+ CellID->56212052]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SEE ALSO",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[Cell[BoxData[
+ StyleBox[
+  ButtonBox["rescaleRates",
+   BaseStyle->"Link",
+   ButtonData->"paclet:UMIST/ref/rescaleRates"],
+  FontFamily->"Verdana"]], "InlineFormula"]], "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["MORE ABOUT",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["UMIST Isotopization Package",
+ BaseStyle->"Link",
+ ButtonData->"paclet:UMIST/guide/UMIST Isotopization Package"]], "MoreAbout",
+ CellID->694089527]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"InsertIsotopes - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, 
+  "Metadata" -> {
+   "built" -> "{2013, 9, 11, 13, 19, 51.0817278}", "context" -> "UMIST`", 
+    "keywords" -> {}, "index" -> True, "label" -> "UMIST Paclet Symbol", 
+    "language" -> "en", "paclet" -> "UMIST", "status" -> "None", "summary" -> 
+    "InsertIsotopes[list] InsertIsotopes takes a list (CSV import) of \
+chemical reactions and inserts one 13C and one 18O atom into each reaction. \
+The unreasonable permutations are cleaned afterwards.", "synonyms" -> {}, 
+    "title" -> "InsertIsotopes", "type" -> "Symbol", "uri" -> 
+    "UMIST/ref/InsertIsotopes"}, "LinkTrails" -> "", "SearchTextTranslated" -> 
+  ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+   StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[5203, 155, 461, 13, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->769563394]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 28002, 706}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[607, 21, 76, 1, 70, "SymbolColorBar"],
+Cell[686, 24, 176, 5, 70, "LinkTrail"],
+Cell[865, 31, 2581, 60, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[3449, 93, 57, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[CellGroupData[{
+Cell[3531, 98, 615, 16, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[4171, 118, 580, 17, 70, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->364118301],
+Cell[4754, 137, 153, 4, 70, "Notes",
+ CellID->1067943069],
+Cell[4910, 143, 244, 6, 70, "Notes",
+ CellID->610160118]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5203, 155, 461, 13, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->769563394],
+Cell[CellGroupData[{
+Cell[5689, 172, 148, 5, 70, "ExampleSection",
+ CellID->482287399],
+Cell[5840, 179, 113, 3, 70, "Input",
+ CellID->12628883],
+Cell[5956, 184, 415, 11, 70, "Input",
+ CellID->232367397],
+Cell[CellGroupData[{
+Cell[6396, 199, 111, 3, 70, "Input",
+ CellID->21013471],
+Cell[6510, 204, 1041, 25, 77, "Output",
+ CellID->160837685]
+}, Open  ]],
+Cell[7566, 232, 419, 11, 70, "Input",
+ CellID->36006848],
+Cell[CellGroupData[{
+Cell[8010, 247, 111, 3, 70, "Input",
+ CellID->44823107],
+Cell[8124, 252, 2533, 55, 172, "Output",
+ CellID->234587707]
+}, Open  ]],
+Cell[10672, 310, 98, 1, 70, "ExampleText",
+ CellID->329675404],
+Cell[CellGroupData[{
+Cell[10795, 315, 108, 3, 70, "Input",
+ CellID->502764565],
+Cell[10906, 320, 2536, 55, 172, "Output",
+ CellID->82470607]
+}, Open  ]],
+Cell[13457, 378, 118, 3, 70, "ExampleText",
+ CellID->224886091],
+Cell[13578, 383, 456, 12, 70, "Input",
+ CellID->159952008],
+Cell[CellGroupData[{
+Cell[14059, 399, 313, 11, 70, "Input",
+ CellID->33345187],
+Cell[14375, 412, 5940, 108, 400, "Output",
+ CellID->458059057]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20352, 525, 271, 9, 70, "Input",
+ CellID->101454752],
+Cell[20626, 536, 4544, 81, 392, "Output",
+ CellID->56212052]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25231, 624, 417, 12, 70, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[25651, 638, 214, 6, 70, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25902, 649, 419, 12, 70, "MoreAboutSection",
+ CellID->38303248],
+Cell[26324, 663, 172, 3, 70, "MoreAbout",
+ CellID->694089527]
+}, Open  ]],
+Cell[26511, 669, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

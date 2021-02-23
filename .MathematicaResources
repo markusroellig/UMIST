@@ -1,0 +1,11 @@
+Resources[
+    Version[1],
+    Sources[
+        Directory["~"]
+    ],
+    Paclet[
+        DocumentationFolder["UMIST/Documentation"],
+        PacletFolder["UMIST"],
+        FunctionPaclet[False]
+    ]
+]
